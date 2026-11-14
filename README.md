@@ -39,6 +39,14 @@ mkdir -p ~/.gemini/antigravity/skills && cp -r unslop/skills/unslop ~/.gemini/an
 
 For a single project, copy it into `.agents/skills/` inside that project instead.
 
+For Hermes Agent, one command clones the repo and installs the skill into `~/.hermes/skills/creative/unslop`:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/prestonw/unslop/main/install-hermes.sh | bash
+```
+
+Then load it in a fresh Hermes session with `skill_view(name='unslop')`. Re-running the script updates the skill in place. The skill ships with the same `references/` and `scripts/` as the Claude Code install, so no per-project copy is needed.
+
 To snapshot a live site or create a story video, install Playwright and its Chromium browser from the project directory where you run the skill:
 
 ```bash
